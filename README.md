@@ -1,6 +1,6 @@
 # DSH Plugin for CLI-Anything
 
-将 [CLI-Anything](https://github.com/HKUDS/CLI-Anything) 集成到 DSH (DeepSeek Harness) 的插件方案。安装后会在 DSH Web UI 的「插件」页面显示，通过自然语言即可浏览、安装、启动和管理 100+ CLI 工具。
+将 [CLI-Anything](https://github.com/HKUDS/CLI-Anything) 集成到 DSH (DeepSeek Harness) 的插件方案。安装后通过自然语言对话即可浏览、安装、启动和管理 100+ CLI 工具。
 
 ## 功能
 
@@ -67,9 +67,6 @@ dsh plugin --profile web add ./dsh-cli-anything
 
 ```
 列出所有 cli-anything 工具
-搜索 ai 相关的工具
-看看 ollama 的详细信息
-帮我安装 ollama
 启动 clibrowser
 ```
 
@@ -88,7 +85,7 @@ dsh-cli-anything/
 │   └── apply.test.ts
 ├── lib/                  # 构建产物（npm run prepare 生成）
 ├── patch.yml             # 开发模式 patch 配置
-└── README.md             # 本文件
+└── README.md             # 说明文档
 ```
 
 ## 开发
