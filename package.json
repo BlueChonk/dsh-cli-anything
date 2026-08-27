@@ -1,0 +1,53 @@
+{
+  "name": "@BlueChonk/dsh-cli-anything",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CLI-Anything integration for DSH - browse, install, and launch CLI-Anything harnesses",
+  "author": "BlueChonk",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "prepare": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=22.19"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "0.0.1-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "bundleDependencies": [
+    "@deepseek-ai/dsh-tools",
+    "@deepseek-ai/schemastery"
+  ],
+  "devDependencies": {
+    "tsdown": "^0.16.0",
+    "vitest": "^4.1.11"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "cli-anything",
+    "agent-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueChonk/dsh-cli-anything.git"
+  },
+  "license": "MIT"
+}

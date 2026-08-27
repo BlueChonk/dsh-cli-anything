@@ -1,0 +1,3 @@
+- insert:
+    - id: cli-anything
+      name: './lib/index.js'
