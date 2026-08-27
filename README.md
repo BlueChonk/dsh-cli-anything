@@ -20,7 +20,15 @@ pip install cli-anything-hub
 
 ## 安装
 
-### 方式一：GitHub Release（推荐）
+### 方式一：GitHub 安装（推荐）
+
+```bash
+dsh plugin --profile web add github:BlueChonk/dsh-cli-anything
+```
+
+构建产物已包含在仓库中，无需额外配置。
+
+### 方式二：GitHub Release
 
 从 [Releases](https://github.com/BlueChonk/dsh-cli-anything/releases) 下载最新 tarball，然后：
 
@@ -28,7 +36,7 @@ pip install cli-anything-hub
 dsh plugin --profile web add ./BlueChonk-dsh-cli-anything-0.1.0.tgz
 ```
 
-### 方式二：开发模式
+### 方式三：开发模式
 
 ```bash
 # 克隆仓库
@@ -43,7 +51,7 @@ npm run prepare
 dsh --profile web --patch ./patch.yml web
 ```
 
-### 方式三：Bundle 安装
+### 方式四：Bundle 安装
 
 ```bash
 dsh plugin --profile web add ./dsh-cli-anything
@@ -83,7 +91,7 @@ dsh-cli-anything/
 │   ├── validateInput.test.ts
 │   ├── runCliHub.test.ts
 │   └── apply.test.ts
-├── lib/                  # 构建产物（npm run prepare 生成）
+├── lib/                  # 构建产物（已提交到仓库）
 ├── patch.yml             # 开发模式 patch 配置
 └── README.md             # 说明文档
 ```
