@@ -15,7 +15,6 @@
     "README.md"
   ],
   "scripts": {
-    "prepare": "tsdown",
     "test": "vitest run",
     "test:watch": "vitest"
   },
