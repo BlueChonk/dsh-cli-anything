@@ -28,15 +28,7 @@ dsh plugin --profile web add github:BlueChonk/dsh-cli-anything
 
 构建产物已包含在仓库中，无需额外配置。
 
-### 方式二：GitHub Release
-
-从 [Releases](https://github.com/BlueChonk/dsh-cli-anything/releases) 下载最新 tarball，然后：
-
-```bash
-dsh plugin --profile web add ./BlueChonk-dsh-cli-anything-0.1.0.tgz
-```
-
-### 方式三：开发模式
+### 方式二：开发模式
 
 ```bash
 # 克隆仓库
@@ -51,7 +43,7 @@ npm run prepare
 dsh --profile web --patch ./patch.yml web
 ```
 
-### 方式四：Bundle 安装
+### 方式三：Bundle 安装
 
 ```bash
 dsh plugin --profile web add ./dsh-cli-anything
@@ -107,9 +99,6 @@ npm run prepare
 
 # 运行测试
 npm test
-
-# 打包 tarball
-npm pack
 ```
 
 ## 技术栈
