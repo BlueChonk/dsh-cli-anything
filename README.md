@@ -13,18 +13,24 @@ dsh --profile web --patch ./patch.yml web
 ### 安装为 Bundle
 
 ```bash
-dsh plugin --profile web add ./cli-anything-dsh/plugin
+dsh plugin --profile web add ./dsh-cli-anything
 ```
 
 ## 文件结构
 
 ```
-plugin/
+dsh-cli-anything/
 ├── package.json          # npm 包配置 + dsh.bundle 声明
 ├── cordis.patch.yml      # 插件补丁配置
-├── index.js              # 插件入口（JavaScript，用于 bundle 分发）
 ├── src/
-│   └── index.ts          # TypeScript 源码
+│   ├── index.ts          # TypeScript 源码
+│   └── utils.ts          # 工具函数
+├── test/
+│   ├── validateInput.test.ts
+│   ├── runCliHub.test.ts
+│   └── apply.test.ts
+├── lib/                  # 构建产物（npm run prepare 生成）
+├── patch.yml             # 开发模式 patch 配置
 └── README.md             # 本文件
 ```
 
